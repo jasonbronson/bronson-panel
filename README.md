@@ -1,6 +1,6 @@
 # Bronson-panel
 
-[![Homeautomation](https://photos-6.dropbox.com/t/2/AAC0vkqVhJuWioPYBcmLhZJ4_0_R1FQ-IoBFMTBmoGsynA/12/16432581/jpeg/32x32/1/_/1/2/homeautomation.jpeg/EJWDoAwYxwMgBygH/ekpyCVZE7vJKMcElxWSNbDzQuPyYhiqtXdEDzcbdxLo?size=2048x1536&size_mode=3)]()
+[![Homeautomation](https://dl.dropboxusercontent.com/s/vz9h2suq4x584nc/homeautomation.jpeg)]()
 
 Bronson-panel is a touchscreen-enabled, mobile-ready, web powered home automation control panel system. 
 

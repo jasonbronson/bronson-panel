@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+sftp-config.json
+/public/slideshow
+/public/images/georgia
+/storage
+.idea*
+/database/migrations/

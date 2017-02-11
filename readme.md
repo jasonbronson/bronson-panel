@@ -1,27 +1,55 @@
-# Laravel PHP Framework
+# Bronson-panel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Bronson-panel is a touchscreen-enabled, mobile-ready, web powered home automation control panel system. 
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+  - Raspberry pi 3
+  - Arduino with rfm69
+  - mqtt
 
-## Official Documentation
+Open source software used:
+  - Rasbian OS
+  - Laravel PHP Framework
+  - Bootstrap
+  - Fontawesome
+  - Jquery
+  - Backstretch JS
+  - Simpleweather JS
+  - Jquery Idle
+  - PHP, Composer, Nginx/Apache
+  
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Features a slideshow on idle of screen pictures located in folder public/slideshow, automatically pulls in weather data, wind speed for your location. More to come.
+ 
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Installation
 
-## Security Vulnerabilities
+Bronson-panel requires PHP, Composer
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Install the dependencies and start the web server. Point to public/ as primary directory for web server.
 
-## License
+Setup Laravel requirements
+```sh
+$ cd where-you-downloaded-code
+$ composer update
+$ chmod 755 -R storage
+$ chmod 755 -R bootstrap/cache/
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Make sure you have rasbian setup and install on SD card then setup an autoscript to run chrome on boot in kiosk mode. 
+
+Example from Rasbian
+put the following into file /home/pi/scripts/start_chromium_browser
+```sh
+#!/bin/bash
+chromium-browser --kiosk --app=$(head -n 1 /home/pi/site.txt)
+```
+Setup the file /home/pi/site.txt with the URL where to open project should be where webserver is located. Ideally you could setup /etc/hosts with homeautomation.dev entry to the location of the server or run it directly on the PI as well.
+
+Option B:
+Install something like fullOS
+https://github.com/guysoft/FullPageOS
+
+
